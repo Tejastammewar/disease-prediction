@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            max-width: 100%;
+            padding: 0 20px;
+        }
+        .direct{
+        color:blue;
+        }
+
+        .text-container {
+            width: 50%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            width: 50%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-item {
+            margin-right: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .input-text {
+            width: calc(30% - 10px);
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Symptom Details</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/details">Details</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="text-container">
+        <p class="direct">If you have any of below symptoms, please enter it in the form beside</p>
+        <input type="text" id="symptomSearch" placeholder="Search symptoms..." oninput="searchSymptoms()">
+            <h2>Symptoms Information</h2>
+            <ul>
+            <li><strong>Itching:</strong> Unpleasant skin sensation</li>
+                <li><strong>Nodal Skin Eruptions:</strong> Skin eruptions or lumps</li>
+                <li><strong>Chills:</strong> Feeling cold or shivering</li>
+                <li><strong>Joint Pain:</strong> Pain in the joints</li>
+                <li><strong>Vomiting:</strong> Forceful expulsion of stomach contents</li>
+                <li><strong>Spotting Urination:</strong> Presence of blood in urine</li>
+                <li><strong>Fatigue:</strong> Extreme tiredness</li>
+                <li><strong>Weight Loss:</strong> Unexplained weight reduction</li>
+                <li><strong>Lethargy:</strong> Lack of energy</li>
+                <li><strong>High Fever:</strong> Elevated body temperature</li>
+                <li><strong>Sunken Eyes:</strong> Hollow appearance of the eyes</li>
+                <li><strong>Breathlessness:</strong> Difficulty in breathing</li>
+                <li><strong>Sweating:</strong> Abnormal or excessive sweating</li>
+                <li><strong>Headache:</strong> Pain in the head</li>
+                <li><strong>Yellowish Skin:</strong> Yellow discoloration of the skin</li>
+                <li><strong>Dark Urine:</strong> Dark-colored urine</li>
+                <li><strong>Nausea:</strong> Feeling of sickness with an inclination to vomit</li>
+                <li><strong>Pain Behind the Eyes:</strong> Aching sensation behind the eyes</li>
+                <li><strong>Back Pain:</strong> Pain in the lower or upper back</li>
+                <li><strong>Constipation:</strong> Difficulty in bowel movements</li>
+                <li><strong>Abdominal Pain:</strong> Pain in the abdominal area</li>
+                <li><strong>Diarrhoea:</strong> Frequent and watery bowel movements</li>
+                <li><strong>Mild Fever:</strong> Slight elevation in body temperature</li>
+                <li><strong>Yellowing of Eyes:</strong> Yellowing of the whites of the eyes</li>
+                <li><strong>Malaise:</strong> General feeling of discomfort</li>
+                <li><strong>Phlegm:</strong> Mucus secretion in the respiratory tract</li>
+                <li><strong>Congestion:</strong> Blockage or congestion, usually in the nasal passages</li>
+                <li><strong>Chest Pain:</strong> Pain or discomfort in the chest</li>
+                <li><strong>Fast Heart Rate:</strong> Abnormally rapid heartbeat</li>
+                <li><strong>Irritation in Anus:</strong> Discomfort or itching in the anus</li>
+                <li><strong>Puffy Face and Eyes:</strong> Swelling in the face and around the eyes</li>
+                <li><strong>Excessive Hunger:</strong> Abnormal increase in appetite</li>
+                <li><strong>Muscle Weakness:</strong> Weakness in the muscles</li>
+                <li><strong>Stiff Neck:</strong> Difficulty in moving the neck</li>
+                <li><strong>Unsteadiness:</strong> Lack of stability or balance</li>
+                <li><strong>Bladder Discomfort:</strong> Discomfort or pain in the bladder</li>
+                <li><strong>Passage of Gases:</strong> Release of gases from the digestive system</li>
+                <li><strong>Depression:</strong> Persistent feeling of sadness and hopelessness</li>
+                <li><strong>Irritability:</strong> Tendency to be easily annoyed or provoked</li>
+                <li><strong>Muscle Pain:</strong> Pain or discomfort in the muscles</li>
+                <li><strong>Red Spots Over Body:</strong> Reddish spots or rashes on the skin</li>
+                <li><strong>Belly Pain:</strong> Pain in the abdominal region</li>
+                <li><strong>Abnormal Menstruation:</strong> Irregular or abnormal menstrual cycles</li>
+                <li><strong>Increased Appetite:</strong> Abnormally increased desire for food</li>
+                <li><strong>Family History:</strong> History of illness within the family</li>
+                <li><strong>Mucoid Sputum:</strong> Thick and viscous sputum</li>
+                <li><strong>Rusty Sputum:</strong> Sputum with a rusty or brownish color</li>
+                <li><strong>Lack of Concentration:</strong> Difficulty in focusing or concentrating</li>
+                <li><strong>Receiving Blood Transfusion:</strong> Recent reception of a blood transfusion</li>
+                <li><strong>Coma:</strong> Unconscious and unresponsive state</li>
+                <li><strong>History of Alcohol Consumption:</strong> Past or present alcohol consumption</li>
+                <li><strong>Blood in Sputum:</strong> Presence of blood in the sputum</li>
+                <li><strong>Palpitations:</strong> Rapid or irregular heartbeats</li>
+                <li><strong>Scurring:</strong> Flaking or peeling of the skin</li>
+                <li><strong>Inflammatory Nails:</strong> Inflammation or swelling around the nails</li>
+                <li><strong>Yellow Crust Ooze:</strong> Oozing of yellowish crust from the skin</li>
+            </ul>
+           
+        </div>
+
+        <form action="/predict" method="post" class="form-container">
+            <div class="checkbox-container">
+                {% for symptom in col %}
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="{{ symptom }}" name="{{ symptom }}">
+                        <label for="{{ symptom }}">{{ symptom }}</label>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="input-group">
+                <label for="symptom1">Symptom 1</label>
+                <input type="text" id="symptom1" name="symptom1" class="input-text">
+            </div>
+
+            <div class="input-group">
+                <label for="symptom2">Symptom 2</label>
+                <input type="text" id="symptom2" name="symptom2" class="input-text">
+            </div>
+
+            <div class="input-group">
+                <label for="symptom3">Symptom 3</label>
+                <input type="text" id="symptom3" name="symptom3" class="input-text">
+            </div>
+
+            <div class="input-group">
+                <label for="symptom4">Symptom 4</label>
+                <input type="text" id="symptom4" name="symptom4" class="input-text">
+            </div>
+
+            <div class="input-group">
+                <label for="symptom5">Symptom 5</label>
+                <input type="text" id="symptom5" name="symptom5" class="input-text">
+            </div>
+
+            <div class="input-group">
+                <label for="symptom6">Symptom 6</label>
+                <input type="text" id="symptom6" name="symptom6" class="input-text">
+            </div>
+
+            <div class="input-group">
+                <label for="symptom7">Symptom 7</label>
+                <input type="text" id="symptom7" name="symptom7" class="input-text">
+            </div>
+
+            <div class="input-group">
+                <label for="symptom8">Symptom 8</label>
+                <input type="text" id="symptom8" name="symptom8" class="input-text">
+                </div>
+                
+                <button type="submit" class="button">Predict</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Disease Prediction</p>
+    </footer>
+    
+   <script>
+    document.getElementById('symptomSearch').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            searchSymptoms();
+        }
+    });
+
+    function searchSymptoms() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('symptomSearch');
+        filter = input.value.toUpperCase();
+
+        // Find the parent ul element dynamically
+        var symptomsContainer = document.querySelector('.text-container ul');
+        li = symptomsContainer.getElementsByTagName('li');
+
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName('strong')[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = '';
+                // Highlight the matched symptom in yellow
+                a.style.backgroundColor = 'yellow';
+            } else {
+                li[i].style.display = 'none';
+                // Remove highlighting if not matched
+                a.style.backgroundColor = '';
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
