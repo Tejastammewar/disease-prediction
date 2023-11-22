@@ -5,7 +5,7 @@ body {
 }
 
 header {
-   background-color:pink;
+    background-color: green;
     color: white;
     text-align: center;
     padding: 1em;
@@ -19,17 +19,20 @@ nav {
     background-color: #333;
     color: white;
     padding: 0.5em;
-   display:flex;
-   justify-content:center;
-   align-content:center;
+    display: flex;
+    align-content: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content:flex-start; 
+}
+
+nav ul li {
+    font-size: 20px;
 }
 
 nav a {
@@ -38,6 +41,10 @@ nav a {
     font-weight: bold;
     font-size: 16px;
 }
+
+/* ... rest of your styles ... */
+
+
 
 section {
     margin: 20px;
